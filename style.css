@@ -9,7 +9,7 @@ html {
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 0 2rem;
     background-color: hsl(30, 38%, 92%);
    width: 100vw;
    overflow: hidden;
@@ -21,9 +21,10 @@ body {
 
 .container {
     max-width: 686px;
+    width: calc(100vw - 2rem);
     display: flex;
     flex-direction: column;
-    margin: 3rem auto;
+    margin: 2.5rem auto;
 }
 
 .image-container-sml {
@@ -37,50 +38,54 @@ body {
 
 .product-image {
     border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: auto;
 }
 
 .text-container {
     background-color: hsl(0, 0%, 100%);
-    padding: 1.1rem 2.6rem;
+    padding: 1.1rem 2.7rem;
     border-radius: 0 0 20px 20px;
 
 }
 
 .product-category-heading {
     font-family: 'Montserrat', sans-serif; 
-    color: hsla(228, 12%, 48%, 0.6);
+    color: hsla(228, 12%, 48%, 0.7);
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.4rem;
     letter-spacing: 0.3rem;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 1.4rem;
 }
 
 .product-name-heading {
     font-family: 'Fraunces', serif;
-    font-size: 2.6em;
-    font-weight: 400;
-    margin-top: 1.8rem;
+    font-size: 3.4rem;
+    font-weight: 500;
+    margin-top: 1.3rem;
+    margin-bottom: 1.1rem;
 }
 
 .product-description {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: hsla(228, 12%, 48%, 0.8);
-    line-height: 1.6rem;
+    font-size: 1.5rem;
+    color: hsla(228, 12%, 48%, 0.7);
+  line-height: 2.5rem; 
 }
 
 .product-price {
     font-family: 'Fraunces', serif;
-    font-size: 2.7rem;
+    font-size: 3.5rem;
     color: hsl(158, 36%, 37%);
     margin-right: 2rem;
     margin-top: 1.8rem;
+    margin-bottom: 1.65rem;
 }
 
 .previous-price {
-    font-size: 1rem;
-    color: hsla(228, 12%, 48%, 0.8);
+    font-size: 1.5rem;
+    color: hsla(228, 12%, 48%, 0.6);
     text-decoration: line-through;
     display: inline-block;
     margin-left: 1rem;
@@ -91,26 +96,80 @@ body {
     text-decoration: none;
    border: none;
    font-family: 'Montserrat', sans-serif;
-   font-size: 1rem;
+   font-size: 1.55rem;
    text-align: center;
    width: 100%;
    border-radius: 10px;
    color: hsl(0, 0%, 100%);
    background-color: hsl(158, 36%, 37%);
-   padding: 1.1rem;
+   padding: 1.6rem 0;
+   margin-bottom: 1.3rem;
+}
+
+.buy-product:hover {
+    background-color: hsl(158, 42%, 18%);
+    cursor: pointer;
 }
 
 .icon {
-    margin-right: 0.7rem;
-    transform: translateY(0.1rem);
+    margin-right: 1.2rem;
+    transform: translateY(0.3rem);
+    width: 1.7rem;
 }
 
 /* font-family: 'Fraunces', serif;
 font-family: 'Montserrat', sans-serif; */
 
+@media (max-width: 608px) {
+  body {
+    padding:0 1rem;
+  }
 
 
-@media (min-width: 769px) and (max-width: 1024px) {
+    .text-container {
+        padding: 0.8rem 1.8rem;
+ 
+     }
+
+
+    .product-category-heading {
+        font-size: 1.1rem;
+        margin-top: 0.6rem;
+    }
+
+    .product-name-heading {
+        font-size: 2.2rem;
+        margin-bottom: 1.6rem;
+      }
+  
+      .product-description {
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+      }
+  
+      .product-price {
+          margin-top: 1.5rem;
+        font-size: 2.1rem;
+        margin-bottom: 2rem;
+      }
+  
+      .previous-price {
+         font-size: 1rem;
+      }
+  
+      .buy-product {
+         font-size: 1.1rem;
+         padding: 1.1rem 0;
+      }
+  
+      .icon {
+          width: 1.2rem;
+      }
+}
+
+
+
+@media (min-width: 855px) {
     .image-container-sml {
         display: none;
     }
@@ -132,7 +191,7 @@ font-family: 'Montserrat', sans-serif; */
     /* Image Container */
 
     .image-container-lrg {
-     display: block;
+     display: flex;
     }
 
     .product-image {
@@ -148,8 +207,43 @@ font-family: 'Montserrat', sans-serif; */
        min-width: 50%;
        max-width: 50%;
        border-radius: 0 10px 10px 0;
-       padding: 0.5rem 2.2rem;
+       padding: 0.8rem 2.3rem;
 
+    }
+
+    .product-category-heading {
+        font-size: 1.1rem;
+        margin-top: 1.7rem;
+    }
+
+
+    .product-name-heading {
+      font-size: 2.8rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .product-description {
+      font-size: 1.2rem;
+      line-height: 1.9rem;
+    }
+
+    .product-price {
+        margin-top: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .previous-price {
+       font-size: 1rem;
+    }
+
+    .buy-product {
+       font-size: 1.1rem;
+       padding: 1.2rem 0;
+    }
+
+    .icon {
+        width: 1.2rem;
     }
 
 }
